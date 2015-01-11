@@ -69,19 +69,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // Layer0: default, leftled:none
         // left hand
         ESC, NO,  NO,  NO,  NO,  NO,  NO,
-        TAB, Q,   W,   F,   P,   G,   NO,
-        BSPC,A,   R,   S,   T,   D,
-        LSFT,Z,   X,   C,   V,   B,   NO,
-        NO,  NO,  NO,  NO,  FN13,
+        TAB, Q,   W,   F,   P,   G,   ESC,
+        LCTL,A,   R,   S,   T,   D,
+        LSFT,Z,   X,   C,   V,   B,   TAB,
+        NO,  NO,  NO,  LALT,LGUI,
                                       NO,  NO,
                                            NO,
-                                 BSPC,FN14,FN15,
+                                 BSPC,FN13,FN15,
         // right hand
-             NO, 6,   7,   8,   9,   0,   NO,
-             NO, J,   L,   U,   W,   SCLN,NO,
+             NO, NO,  NO,  NO,  NO,  NO,  NO,
+             NO, J,   L,   U,   Y,   SCLN,NO,
                  H,   N,   E,   I,   O,   ENT,
              NO, K,   M,   COMM,DOT, SLSH,RSFT,
-                      FN13,NO,  NO,  NO,  FN12,
+                      NO,  NO,  NO,  NO,  NO,
         NO,  NO,
         NO,
         FN15,FN14,SPC
@@ -90,8 +90,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // Layer1: Navigation and editing, TAP
         // left hand
         TRNS,NO,  NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  ACL2,ACL1,ACL0,NO,  TRNS,
-        TRNS,NO,  NO,  BTN2,BTN1,NO,
+        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
+        TRNS,NO,  NO,  NO,  NO,  NO,
         TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
@@ -100,9 +100,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // right hand
              NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
-             TRNS,NO,  PGUP,  UP,  NO,  NO,  TRNS,
+             TRNS,NO,  PGUP,UP,  NO,  NO,  TRNS,
                   NO,  LEFT,DOWN,RGHT,NO,  TRNS,
-             TRNS,NO,  PGDN,  NO,  NO,  NO,  TRNS,
+             TRNS,NO,  PGDN,NO,  NO,  NO,  TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
         TRNS,
@@ -113,7 +113,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         TRNS,NO,  NO,  NO,  NO,  NO,  NO,
         TRNS,FN1, FN2, FN10,FN11,NO,  TRNS,
-        TRNS,FN3, FN4, FN9, FN0, NO,
+        TRNS,FN3, FN4, FN9, FN0, QUOT,
         TRNS,FN5, FN6, LBRC,RBRC,NO,  TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
@@ -143,7 +143,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  TRNS,TRNS,TRNS,
 
         // right hand
-             NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
+             FN12,NO,  NO,  NO,  NO,  NO,  TRNS,
              TRNS,WH_U,NO,  MS_U,NO,  NO,  TRNS,
                   WH_D,MS_L,MS_D,MS_R,NO,  TRNS,
              TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
