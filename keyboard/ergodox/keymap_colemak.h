@@ -1,23 +1,23 @@
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
-     * Keymap: Default Layer in COLEMAK
+     * Keymap: Layer 0: Default Layer in COLEMAK
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |   NO   |  NO  |  NO  |  NO  |  NO  |  NO  |  NO  |           |  NO  |  NO  |  NO  |  NO  |  NO  |  NO  |  NO    |
+     * |    ~   |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   =  |   NO   |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |   NO   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   ;  |  NO    |
+     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |   NO   |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  | ENTER  |
-     * |--------+------+------+------+------+------|  NO  |           |  NO  |------+------+------+------+------+--------|
+     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * |--------+------+------+------+------+------| ESC  |           | ENT  |------+------+------+------+------+--------|
      * | LSHIFT |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RSHIFT |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   | NO   | Ctrl | Ctrl | LAlt | LGui |                                       |  TAB | ESC  | ENTER| ENTER|  NO  |
+     *   | Ctrl | Ctrl | Ctrl | LAlt | LGui |                                       |  L1  | LEFT | DOWN |  UP | RIGHT |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        |  NO  |  NO  |       |  NO  |  NO  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |  NO  |       |  NO  |      |      |
-     *                                 |BkSpL2|  L3  |------|       |------| Shft |Spc&L1|
+     *                                 |  L1  | ESC  |------|       |------| ENT  |  Spc |
      *                                 |      |      |  NO  |       |  NO  |      |      |
      *                                 `--------------------'       `--------------------'
      *
@@ -25,13 +25,13 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * Keymap: Layer 1
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+     * |    `   |   !  |   @  |   #  |   $  |   %  |   ^  |           |   &  |   *  |   (  |   )  |   _  |   +  |        |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |   !  |   #  |   {  |   }  |   ~  |      |           |      |      |   +  |  *   |      |  :   |        |
+     * |        |      |      |   {  |   }  |   ~  |      |           |      |      | PgUp |  UP  |      |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |   @  |   $  |   (  |   )  |   %  |------|           |------|  =   |   -  |  '   |  "   |  ?   |        |
+     * |        |   @  |   $  |   (  |   )  |   %  |------|           |------|      | LEFT | DOWN | RIGHT|      |   '    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |   `  |   ^  |   [  |   ]  |   |  |      |           |      |  &   |   _  |  <   |  >   |  \   |        |
+     * |        |   `  |   ^  |   [  |   ]  |   |  |      |           |      |      | PgDn |  <   |  >   |  /   |        |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
      *   |      |      |      |      |      |                                       |      |      |      |      |      |
      *   `----------------------------------'                                       `----------------------------------'
@@ -43,74 +43,73 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                 |      |      |      |       |      |      |      |
      *                                 `--------------------'       `--------------------'
      *
-     * Keymap: Layer 2
+     * Keymap: Layer 3: SWOLEMAK - Swedish Colemak
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+     * | Dead ` |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   =  |   NO   |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |      |           |      |  NO  | PgUp |  Up  |  NO  |  NO  |        |
+     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   Ä  |   Å    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |------|           |------|  NO  |  Lft |  Dn  | Rght |  NO  |        |
-     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |      |           |      |  NO  | PgDn |  NO  |  NO  |  NO  |        |
+     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   Ö    |
+     * |--------+------+------+------+------+------|  NO  |           |  NO  |------+------+------+------+------+--------|
+     * | LSHIFT |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RSHIFT |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |      |      |      |      |                                       |      |      |      |      |      |
+     *   | Ctrl | Ctrl | Ctrl | LAlt | LGui |                                       |  L1  | LEFT |  UP  | DOWN | RIGHT |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        |      |      |       |      |      |
+     *                                        |  NO  |  NO  |       |  NO  |  NO  |
      *                                 ,------|------|------|       |------+------+------.
-     *                                 |      |      |      |       |      |      |      |
-     *                                 |      |      |------|       |------|      |      |
-     *                                 |      |      |      |       |      |      |      |
+     *                                 |      |      |  NO  |       |  NO  |      |      |
+     *                                 |  L1  |  NO  |------|       |------| ENT  |  Spc |
+     *                                 |      |      |  NO  |       |  NO  |      |      |
      *                                 `--------------------'       `--------------------'
      *
-     *
-     * Keymap: Layer 3
-     *
-     * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
-     * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  /   |  7   |  8   |  9   |  +   |        |
-     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |  F6  |  F7  |  F8  |  F9  |  F10 |------|           |------|  NO  |  4   |  5   |  6   |  -   |        |
-     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |  F11 |  F12 |  F13 |  F14 |  F15 |      |           |      |  NO  |  1   |  2   |  3   |  *   |        |
-     * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |      |      |      |      |                                       |  0   |   .  |   =  |  =   |      |
-     *   `----------------------------------'                                       `----------------------------------'
-     *                                        ,-------------.       ,-------------.
-     *                                        |      |      |       |      |      |
-     *                                 ,------|------|------|       |------+------+------.
-     *                                 |      |      |      |       |      |      |      |
-     *                                 |      |      |------|       |------|      |      |
-     *                                 |      |      |      |       |      |      |      |
-     *                                 `--------------------'       `--------------------'
      *
      *
      */
 
     KEYMAP(  // Layer0: default, leftled:none
         // left hand
-        ESC, 1,   2,   3,   4,   5,   NO,
+        GRV, 1,   2,   3,   4,   5,    6,
         TAB, Q,   W,   F,   P,   G,   NO,
         BSPC,A,   R,   S,   T,   D,
-        LSFT,Z,   X,   C,   V,   B,   NO,
-        NO,  LCTL,LCTL,LALT,LGUI,
+        LSFT,Z,   X,   C,   V,   B,   ESC,
+        LCTL,LCTL,LCTL,LALT,LGUI,
                                       NO,FN23,
                                            NO,
-                                 FN22,FN21,NO,
+                                 FN22,ESC,FN21,
         // right hand
-             NO, 6,   7,   8,   9,   0,  NO,
-             NO, J,   L,   U,   Y,   SCLN,NO,
-                 H,   N,   E,   I,   O,   ENT,
-             NO, K,   M,   COMM,DOT, SLSH,RSFT,
-                      TAB, ESC, ENT, ENT, NO,
+             7,  8,   9,   0,   MINS,EQL,   NO,
+             NO, J,   L,   U,   Y,   SCLN,BSLS,
+                 H,   N,   E,   I,   O,   QUOT,
+             ENT,K,   M,   COMM,DOT, SLSH,RSFT,
+                      FN22,  LEFT,DOWN,UP,  RIGHT,
         NO,  NO,
         NO,
-        NO,  FN24,FN20
+        NO,  ENT,SPC
     ),
 
-    KEYMAP(  // Layer1: Symbols and punctuation, HOLD
+    KEYMAP(  // Layer1: Swolemak
+        // left hand
+        GRV, 1,   2,   3,   4,   5,    6,
+        TAB, Q,   W,   F,   P,   G,   NO,
+        BSPC,A,   R,   S,   T,   D,
+        LSFT,Z,   X,   C,   V,   B,   ESC,
+        LCTL,LCTL,LCTL,LALT,LGUI,
+                                      NO,FN23,
+                                           NO,
+                                 FN22,ESC ,FN20,
+        // right hand
+             7,  8,   9,   0,   MINS,EQL,   NO,
+             NO, J,   L,   U,   Y,   PMNS,PAST,
+                 H,   N,   E,   I,   O,   PPLS, ENT,K,   M,   COMM,DOT, SLSH,RSFT,
+                      FN22,  LEFT,DOWN,UP,  RIGHT,
+        NO,  NO,
+        NO,
+        NO,  ENT,SPC
+    ),
+
+    KEYMAP(  // Layer3: Arrows and punctuation, HOLD
         // left hand
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS, FN1, FN3,FN10,FN11,FN13,  TRNS,
@@ -123,30 +122,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // right hand
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,  NO,PPLS,PAST,NO,  FN19,TRNS,
-                   EQL,MINS,QUOT,FN15,FN18,TRNS,
-             TRNS, FN7,FN14,FN16,FN17,BSLS,TRNS,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-
-    KEYMAP(  // Layer2: Navigation, HOLD
-        // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-
-        // right hand
-             NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
-             TRNS,NO,  PGUP,UP,  NO,  NO,  TRNS,
-                  NO,  LEFT,DOWN,RGHT,NO,  TRNS,
+             TRNS,NO,  PGUP,UP,  NO,  SCLN,BSLS,
+                  NO,  LEFT,DOWN,RGHT,NO,  QUOT,
              TRNS,NO,  PGDN,NO,  NO,  NO,  TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
@@ -154,230 +131,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS
     ),
 
-    KEYMAP(  // Layer3: Numbers and function keys, HOLD
-        // left hand
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,F1,  F2,  F3,  F4,  F5,  TRNS,
-        TRNS,F6,  F7,  F8,  F9,  F10,
-        TRNS,F11, F12, F13, F14, F15, TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
 
-        // right hand
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,PSLS,   7,   8,   9,PPLS,TRNS,
-                    NO,   4,   5,   6,PMNS,TRNS,
-             TRNS,  NO,   1,   2,   3,PAST,TRNS,
-                          0,PDOT,PEQL,PEQL, TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-/*
-    KEYMAP(  // Layer1: Workman layout, leftled:all
-        // left hand
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,Q,   D,   R,   W,   B,   TRNS,
-        TRNS,A,   S,   H,   T,   G,
-        TRNS,Z,   X,   M,   C,   V,   TRNS,
-        TRNS,TRNS,FN17,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-        // right hand
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,J,   F,   U,   P,   4,   TRNS,
-                  Y,   N,   E,   O,   I,   TRNS,
-             TRNS,K,   L,   TRNS,TRNS,TRNS,TRNS,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
 
-    KEYMAP(  // Layer2: numpad, leftled:mid/blue
-        // left hand
-        TRNS,NO,  NO,  NO,  NO,  PAUS,PSCR,
-        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,NO,  NO,  NO,  TRNS,NO,
-        TRNS,NO,  NO,  NO,  TRNS,NO,  TRNS,
-        TRNS,TRNS,FN17,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-        // right hand
-             SLCK,NLCK,PSLS,PAST,PAST,PMNS,BSPC,
-             TRNS,NO,  P7,  P8,  P9,  PMNS,PGUP,
-                  NO,  P4,  P5,  P6,  PPLS,PGDN,
-             TRNS,NO,  P1,  P2,  P3,  PPLS,PENT,
-                       P0,  PDOT,SLSH,PENT,PENT,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-
-    KEYMAP(  // Layer3: F-keys + PgUp/PgDn on right hand, leftled:bot/green
-        // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,NO,  TRNS,NO,  NO,  NO,
-        TRNS,NO,  TRNS,NO,  NO,  NO,  TRNS,
-        TRNS,TRNS,TRNS,LALT,LGUI,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 LCTL,LSFT,TRNS,
-        // right hand
-             NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
-             TRNS,NO,  F1,  F2,  F3,  F4,  PGUP,
-                  NO,  F5,  F6,  F7,  F8,  PGDN,
-             TRNS,NO,  F9,  F10, F11, F12, APP,
-                       RGUI,RALT,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,RSFT,RCTL
-    ),
-
-    KEYMAP(  // Layer4: unconvenient keys on right hand, leftled:top/white
-        // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,TRNS,NO,  NO,  NO,  NO,
-        TRNS,TRNS,NO,  NO,  NO,  NO,  TRNS,
-        TRNS,TRNS,TRNS,LALT,LGUI,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-*/
-        /* in Workman right hand will be:
-                { } ( ) +
-              ^ ! ?     =
-              ' ! $ " ; \
-              # [ < > ] \
-        */
-/*
-        // right hand
-             NO,  NO,  4,   5,   9,   0,   PPLS,
-             TRNS,MINS,2,   FN5, 9,   0,   EQL,
-                  BSLS,2,   P,   FN1, 1,   FN2,
-             TRNS,3,   6,   FN3, FN4, 7,   FN2,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-
-    KEYMAP(  // Layer5: F-keys instead of numbers, leftled:top/white
-        // left hand
-        TRNS,F1,  F2,  F3,  F4,  F5,  F6,
-        TRNS,P1,  P2,  P3,  P4,  P5,  TRNS,
-        TRNS,TRNS,TRNS,E,   TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-        // right hand
-             F7,  F8,  F9,  F10, F11, F12, TRNS,
-             TRNS,P6,  P7,  P8,  P9,  P0,  TRNS,
-                  TRNS,U,   TRNS,TRNS,TRNS,TRNS,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-
-    KEYMAP(  // Layer6: F-keys + utils(Teensy, Workman-layer switch), leftled:top/white+onboard
-        // left hand
-        FN0, F1,  F2,  F3,  F4,  F5,  F6,
-        TRNS,P1,  P2,  P3,  P4,  P5,  TRNS,
-        TRNS,TRNS,TRNS,E,   TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        FN18,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-        // right hand
-             F7,  F8,  F9,  F10, F11, F12, FN0,
-             TRNS,P6,  P7,  P8,  P9,  P0,  TRNS,
-                  TRNS,U,   TRNS,TRNS,TRNS,TRNS,
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-
-    //
-    // rarely used
-    //
-
-    KEYMAP(  // Layer7: F-keys only, leftled:top/white
-        // left hand
-        FN0, NO,  NO,  NO,  NO,  NO,  NO,
-        FN1, F13, F14, F15, F16, NO,  TRNS,
-        TRNS,F17, F18, F19, F20, NO,
-        TRNS,F21, F22, F23, F24, NO,  TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-        // right hand
-             NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
-             TRNS,NO,  F1,  F2,  F3,  F4,  TRNS,
-                  NO,  F5,  F6,  F7,  F8,  TRNS,
-             TRNS,NO,  F9,  F10, F11, F12, TRNS,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        SLEP,TRNS,TRNS
-    ),
-
-    KEYMAP(  // Layer8: mouse and navigation, leftled:mid/blue+bot/green
-        // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  ACL0,NO,  TRNS,
-        TRNS,NO,  NO,  TRNS,ACL1,NO,
-        TRNS,NO,  NO,  TRNS,ACL2,NO,  TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-
-        // right hand
-             F16, MPLY,MPRV,MNXT,VOLD,VOLU,MUTE,
-             F14, BTN2,WH_L,WH_U,WH_D,WH_R,PGUP,
-                  BTN1,MS_L,MS_U,MS_D,MS_R,PGDN,
-             F15, BTN3,HOME,END, DEL, INS, NO,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-
-    KEYMAP(  // Layer9: application-specific shortcuts (mostly browser), leftled:top/white+bot/green
-        // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,NO,  NO,  NO,  NO,  NO,
-        TRNS,NO,  NO,  NO,  TRNS,NO,  TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,
-                                      TRNS,TRNS,
-                                           TRNS,
-                                 TRNS,TRNS,TRNS,
-        // right hand
-             NO,  NO,  NO,  NO,  NO,  NO,  TRNS,
-             TRNS,NO,  FN12,FN13,FN14,FN15,FN10,
-                  FN1, FN2, FN3, FN4, FN5, FN11,
-             TRNS,TRNS,FN6, FN7, FN8, FN9, FN0,
-                       TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
-    ),
-*/
 /*
     // templates to copy from
 
@@ -457,7 +212,7 @@ static const uint16_t PROGMEM fn_actions[] = {
     [9] =   ACTION_MODS_KEY(MOD_LSFT, KC_9),                // FN9  = Shifted 9 // (
 	[10] =  ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),             // FN10 = Shifted [ // {
 	[11] =  ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),             // FN11 = Shifted ] // }
-    
+
     [12] =  ACTION_MODS_KEY(MOD_LSFT, KC_BSLS),             // FN12 = Shifted \ // |
     [13] =  ACTION_MODS_KEY(MOD_LSFT, KC_GRV),              // FN13 = Shifted ` // ~
     [14] =  ACTION_MODS_KEY(MOD_LSFT, KC_MINS),             // FN14 = Shifted - // _
@@ -471,9 +226,9 @@ static const uint16_t PROGMEM fn_actions[] = {
     //[21] =	ACTION_LAYER_TAP_TOGGLE(2),						// FN21 - Tap toggle Layer 2
     //[22] =	ACTION_LAYER_TAP_TOGGLE(3),						// FN22 - Tap toggle Layer 3
 
-    [20] =  ACTION_LAYER_TAP_KEY(1, KC_SPC),                // FN20 = momentary Layer1 on Space key
-    [21] =  ACTION_LAYER_MOMENTARY(3),                      // FN21 = momentary Layer3
-    [22] =  ACTION_LAYER_TAP_KEY(2, KC_BSPC),               // FN22 = momentary Layer2 on Backspace key
+    [20] =  ACTION_DEFAULT_LAYER_SET(0),                    // FN20 = Set default layer to Layer0
+    [21] =  ACTION_DEFAULT_LAYER_SET(1),                    // FN21 = Set default layer to Layer1
+    [22] =  ACTION_LAYER_MOMENTARY(2),                      // FN22 = momentary Layer2
 
     [23] =  ACTION_FUNCTION(TEENSY_KEY),                    // FN23 - Teensy key
 
