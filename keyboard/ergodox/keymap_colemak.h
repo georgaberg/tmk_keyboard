@@ -3,11 +3,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * Keymap: Layer 0: Default Layer in COLEMAK
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |    ~   |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   =  |   NO   |
+     * |  ESC   |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   =  |   \    |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   ;  |   \    |
+     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   ;  |   '    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  | ENTER  |
      * |--------+------+------+------+------+------| ESC  |           | ENT  |------+------+------+------+------+--------|
      * | LSHIFT |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RSHIFT |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -17,7 +17,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                        |  NO  |  NO  |       |  NO  |  NO  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |  NO  |       |  NO  |      |      |
-     *                                 |  L1  | ESC  |------|       |------| ENT  |  Spc |
+     *                                 |  L1  |  NO  |------|       |------|  NO  |  Spc |
      *                                 |      |      |  NO  |       |  NO  |      |      |
      *                                 `--------------------'       `--------------------'
      *
@@ -25,13 +25,13 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * Keymap: Layer 1
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |    `   |   !  |   @  |   #  |   $  |   %  |   ^  |           |   &  |   *  |   (  |   )  |   _  |   +  |        |
+     * |        |   !  |   @  |   #  |   $  |   %  |   ^  |           |   &  |   *  |   (  |   )  |   _  |   +  |        |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |      |      |   {  |   }  |   ~  |      |           |      |      | PgUp |  UP  |      |   ;  |   \    |
+     * |        |      |      |   {  |   }  |   ~  |      |           |      | PgUp |   -  |  UP  |      |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * |        |   @  |   $  |   (  |   )  |   %  |------|           |------|      | LEFT | DOWN | RIGHT|      |   '    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |   `  |   ^  |   [  |   ]  |   |  |      |           |      |      | PgDn |  <   |  >   |  /   |        |
+     * |        |   `  |   ^  |   [  |   ]  |   |  |      |           |      | PgDn |   _  |  <   |  >   |  ?   |        |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
      *   |      |      |      |      |      |                                       |      |      |      |      |      |
      *   `----------------------------------'                                       `----------------------------------'
@@ -70,43 +70,44 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // Layer0: default, leftled:none
         // left hand
-        GRV, 1,   2,   3,   4,   5,    6,
+        ESC, 1,   2,   3,   4,   5,    6,
         TAB, Q,   W,   F,   P,   G,   NO,
         BSPC,A,   R,   S,   T,   D,
         LSFT,Z,   X,   C,   V,   B,   ESC,
         LCTL,LCTL,LCTL,LALT,LGUI,
                                       NO,FN23,
                                            NO,
-                                 FN22,ESC,FN21,
+                                 FN22,NO,FN21,
         // right hand
-             7,  8,   9,   0,   MINS,EQL,   NO,
-             NO, J,   L,   U,   Y,   SCLN,BSLS,
-                 H,   N,   E,   I,   O,   QUOT,
+             7,  8,   9,   0,   MINS,EQL, BSLS,
+             NO, J,   L,   U,   Y,   SCLN,QUOT,
+                 H,   N,   E,   I,   O,   ENT,
              ENT,K,   M,   COMM,DOT, SLSH,RSFT,
                       FN22,  LEFT,DOWN,UP,  RIGHT,
         NO,  NO,
         NO,
-        NO,  ENT,SPC
+        NO,  NO,SPC
     ),
 
     KEYMAP(  // Layer1: Swolemak
         // left hand
-        GRV, 1,   2,   3,   4,   5,    6,
+        ESC, 1,   2,   3,   4,   5,    6,
         TAB, Q,   W,   F,   P,   G,   NO,
         BSPC,A,   R,   S,   T,   D,
         LSFT,Z,   X,   C,   V,   B,   ESC,
         LCTL,LCTL,LCTL,LALT,LGUI,
                                       NO,FN23,
                                            NO,
-                                 FN22,ESC ,FN20,
+                                 FN22,NO,FN20,
         // right hand
              7,  8,   9,   0,   MINS,EQL,   NO,
              NO, J,   L,   U,   Y,   PMNS,PAST,
-                 H,   N,   E,   I,   O,   PPLS, ENT,K,   M,   COMM,DOT, SLSH,RSFT,
-                      FN22,  LEFT,DOWN,UP,  RIGHT,
+                 H,   N,   E,   I,   O,   PPLS,
+             ENT,K,   M,   COMM,DOT, SLSH,RSFT,
+                      FN22,LEFT,DOWN,UP, RIGHT,
         NO,  NO,
         NO,
-        NO,  ENT,SPC
+        NO,  NO,SPC
     ),
 
     KEYMAP(  // Layer3: Arrows and punctuation, HOLD
