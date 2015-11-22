@@ -1,37 +1,37 @@
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
-     * Keymap: Layer 0: Default Layer in COLEMAK
+     * Keymap: Layer 0: Default Layer with US host layout.
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |  ESC   |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   =  |   \    |
+     * |  ESC   |   1  |   2  |   3  |   4  |   5  |      |           |Dead `|   6  |   7  |   8  |   9  |   0  |  BSPC  |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   ;  |   '    |
+     * |  TAB   |   Q  |   W  |   F  |   P  |   G  | CAPS |           | PgUp |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  | ENTER  |
-     * |--------+------+------+------+------+------| ESC  |           | ENT  |------+------+------+------+------+--------|
+     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * |--------+------+------+------+------+------|  NO  |           | PgDn |------+------+------+------+------+--------|
      * | LSHIFT |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RSHIFT |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
      *   | Ctrl | Ctrl | Ctrl | LAlt | LGui |                                       |  L1  | LEFT | DOWN |  UP | RIGHT |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        |  NO  |  NO  |       |  NO  |  NO  |
+     *                                        |  NO  |Teensy|       |  NO  |  NO  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |  NO  |       |  NO  |      |      |
-     *                                 |  L1  |  NO  |------|       |------|  NO  |  Spc |
-     *                                 |      |      |  NO  |       |  NO  |      |      |
+     *                                 |  L1  |  L2  |------|       |------|  ENT |  Spc |
+     *                                 |      |      |  L3  |       |  NO  |      |      |
      *                                 `--------------------'       `--------------------'
      *
      *
-     * Keymap: Layer 1
+     * Keymap: Layer 1 - Symbols and Navigation with US host layout.
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |        |   !  |   @  |   #  |   $  |   %  |   ^  |           |   &  |   *  |   (  |   )  |   _  |   +  |        |
+     * |        |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |        |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |      |      |   {  |   }  |   ~  |      |           |      | PgUp |   -  |  UP  |      |   ;  |   \    |
+     * |        |   !  |   #  |   {  |   }  |   ~  |      |           |      |   *  |   +  |  UP  |      |   :  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |   @  |   $  |   (  |   )  |   %  |------|           |------|      | LEFT | DOWN | RIGHT|      |   '    |
+     * |        |   @  |   $  |   (  |   )  |   %  |------|           |------|   =  | LEFT | DOWN | RIGHT|   _  |   "    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |   `  |   ^  |   [  |   ]  |   |  |      |           |      | PgDn |   _  |  <   |  >   |  ?   |        |
+     * |        |   `  |   ^  |   [  |   ]  |   |  |      |           |      |   &  |   -  |  <   |  >   |  ?   |        |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
      *   |      |      |      |      |      |                                       |      |      |      |      |      |
      *   `----------------------------------'                                       `----------------------------------'
@@ -43,77 +43,98 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                 |      |      |      |       |      |      |      |
      *                                 `--------------------'       `--------------------'
      *
-     * Keymap: Layer 3: SWOLEMAK - Swedish Colemak
+     * Keymap: Layer 2 - Numpad
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * | Dead ` |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   =  |   NO   |
+     * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           |  NO  |   J  |   L  |   U  |   Y  |   Ä  |   Å    |
+     * |        |      |      |      |      |      |      |           |      |      |   7  |   8  |   9  |      |        |
+     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+     * |        |      |      |      |      |      |------|           |------|      |   4  |   5  |   6  |      |        |
+     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+     * |        |      |      |      |      |      |      |           |      |      |   1  |   2  |   3  |      |        |
+     * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+     *   |      |      |      |      |      |                                       |   0  |   ,  |   .  |      |      |
+     *   `----------------------------------'                                       `----------------------------------'
+     *                                        ,-------------.       ,-------------.
+     *                                        |      |      |       |      |      |
+     *                                 ,------|------|------|       |------+------+------.
+     *                                 |      |      |      |       |      |      |      |
+     *                                 |      |      |------|       |------|      |      |
+     *                                 |      |      |      |       |      |      |      |
+     *                                 `--------------------'       `--------------------'
+     *
+     * Keymap: Layer 3: Swedish Colemak Layer with special host layout.
+     *
+     * ,--------------------------------------------------.           ,--------------------------------------------------.
+     * |  ESC   |   1  |   2  |   3  |   4  |   5  |      |           |Dead `|   6  |   7  |   8  |   9  |   0  |  BSPC  |
+     * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+     * |  TAB   |   Q  |   W  |   F  |   P  |   G  |  NO  |           | PgUp |   J  |   L  |   U  |   Y  |   Ä  |   Å    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   Ö    |
-     * |--------+------+------+------+------+------|  NO  |           |  NO  |------+------+------+------+------+--------|
+     * |--------+------+------+------+------+------|  NO  |           | PgDn |------+------+------+------+------+--------|
      * | LSHIFT |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RSHIFT |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   | Ctrl | Ctrl | Ctrl | LAlt | LGui |                                       |  L1  | LEFT |  UP  | DOWN | RIGHT |
+     *   | Ctrl | Ctrl | Ctrl | LAlt | LGui |                                       |  L1  | LEFT | DOWN |  UP | RIGHT |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        |  NO  |  NO  |       |  NO  |  NO  |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |  NO  |       |  NO  |      |      |
-     *                                 |  L1  |  NO  |------|       |------| ENT  |  Spc |
-     *                                 |      |      |  NO  |       |  NO  |      |      |
+     *                                 |  L1  |  L2  |------|       |------|  ENT |  Spc |
+     *                                 |      |      |  L0  |       |  NO  |      |      |
      *                                 `--------------------'       `--------------------'
      *
      *
      *
      */
 
-    KEYMAP(  // Layer0: default, leftled:none
+    KEYMAP(  // Layer0: default - To be used with us colemak host layout.
         // left hand
-        ESC, 1,   2,   3,   4,   5,    6,
-        TAB, Q,   W,   F,   P,   G,   NO,
-        BSPC,A,   R,   S,   T,   D,
-        LSFT,Z,   X,   C,   V,   B,   ESC,
+        ESC, 1,   2,   3,   4,   5,   NO,
+        TAB, Q,   W,   E,   R,   T,   CAPS,
+        BSPC,A,   S,   D,   F,   G,
+        LSFT,Z,   X,   C,   V,   B,   NO,
         LCTL,LCTL,LCTL,LALT,LGUI,
-                                      NO,FN23,
+                                      NO,FN30,
                                            NO,
-                                 FN22,NO,FN21,
+                                 FN25,FN26,FN28,
         // right hand
-             7,  8,   9,   0,   MINS,EQL, BSLS,
-             NO, J,   L,   U,   Y,   SCLN,QUOT,
-                 H,   N,   E,   I,   O,   ENT,
-             ENT,K,   M,   COMM,DOT, SLSH,RSFT,
-                      FN22,  LEFT,DOWN,UP,  RIGHT,
+             NO, 6,   7,   8,   9,   0,   BSPC,
+             NO, Y,   U,   I,   O,   P,   BSLS,
+                 H,   J,   K,   L,   SCLN,QUOT,
+             NO, N,   M,   COMM,DOT, SLSH,RSFT,
+                      FN25,  LEFT,DOWN,UP,  RIGHT,
         NO,  NO,
         NO,
-        NO,  NO,SPC
+        NO,  ENT,SPC
     ),
 
-    KEYMAP(  // Layer1: Swolemak
+    KEYMAP(  // Layer1: Swedish layer to be used with Colemak (Programming) host layout.
         // left hand
-        ESC, 1,   2,   3,   4,   5,    6,
-        TAB, Q,   W,   F,   P,   G,   NO,
-        BSPC,A,   R,   S,   T,   D,
-        LSFT,Z,   X,   C,   V,   B,   ESC,
+        ESC, 1,   2,   3,   4,   5,   NO,
+        TAB, Q,   W,   E,   R,   T,   CAPS,
+        BSPC,A,   S,   D,   F,   G,
+        LSFT,Z,   X,   C,   V,   B,   NO,
         LCTL,LCTL,LCTL,LALT,LGUI,
-                                      NO,FN23,
+                                      NO,  NO,
                                            NO,
-                                 FN22,NO,FN20,
+                                 FN25,FN26,FN27,
         // right hand
-             7,  8,   9,   0,   MINS,EQL,   NO,
-             NO, J,   L,   U,   Y,   PMNS,PAST,
-                 H,   N,   E,   I,   O,   PPLS,
-             ENT,K,   M,   COMM,DOT, SLSH,RSFT,
-                      FN22,LEFT,DOWN,UP, RIGHT,
+             NO,   6,   7,   8,   9,   0,   BSPC,
+             PGUP, Y,   U,   I,   O,   PMNS,PAST,
+                   H,   J,   K,   L,   SCLN,PPLS,
+             PGDN, N,   M,   COMM,DOT, SLSH,RSFT,
+                      FN25,LEFT,DOWN,UP, RIGHT,
         NO,  NO,
         NO,
-        NO,  NO,SPC
+        NO,  ENT,SPC
     ),
 
-    KEYMAP(  // Layer3: Arrows and punctuation, HOLD
+    KEYMAP(  // Layer2: Arrows and punctuation, HOLD
         // left hand
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS, FN1, FN3,FN10,FN11,FN13,  TRNS,
+        TRNS,  F1,  F2,  F3,  F4,  F5,TRNS,
+        TRNS, FN1, FN3,FN10,FN11,FN13,TRNS,
         TRNS, FN2, FN4, FN9, FN0, FN5,
         TRNS, GRV, FN6,LBRC,RBRC,FN12,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
@@ -122,17 +143,62 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  TRNS,TRNS,TRNS,
 
         // right hand
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,NO,  PGUP,UP,  NO,  SCLN,BSLS,
-                  NO,  LEFT,DOWN,RGHT,NO,  QUOT,
-             TRNS,NO,  PGDN,NO,  NO,  NO,  TRNS,
+             TRNS,F6,  F7,  F8,  F9,  F10, TRNS,
+             PGUP,FN8, FN20,UP,  NO,  P   ,BSLS,
+                  EQL, LEFT,DOWN,RGHT,FN14,QUOT,
+             PGDN,FN7, MINS,FN16,FN17,FN18,TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
         TRNS,
         TRNS,TRNS,TRNS
     ),
 
+    KEYMAP(  // Layer3: Numpad, HOLD
+        // left hand
+        TRNS, NO, NO, NO, NO, NO,TRNS,
+        TRNS, NO, NO, NO, NO, NO,TRNS,
+        TRNS, NO, NO, NO, NO, NO,
+        TRNS, NO, NO, NO, NO, NO,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,
+                                      TRNS,TRNS,
+                                           TRNS,
+                                 TRNS,TRNS,TRNS,
 
+        // right hand
+             TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
+             TRNS,NO,  7,   8,   9,   NO,  NO  ,
+                  NO,  4,   5,   6,   NO,  NO  ,
+             TRNS,NO,  1,   2,   3,   NO,  TRNS,
+                       0, COMM,DOT,TRNS,TRNS,
+        TRNS,TRNS,
+        TRNS,
+        TRNS,TRNS,TRNS
+    ),
+
+    
+
+    /*
+    KEYMAP(  // Layer4: To be used with us qwerty host layout.
+        // left hand
+        ESC, 1,   2,   3,   4,   5,   NO,
+        TAB, Q,   W,   F,   P,   G,   CAPS,
+        BSPC,A,   R,   S,   T,   D,
+        LSFT,Z,   X,   C,   V,   B,   NO,
+        LCTL,LCTL,LCTL,LALT,LGUI,
+                                      NO,FN30,
+                                           NO,
+                                 FN25,FN26,FN28,
+        // right hand
+             NO, 6,   7,   8,   9,   0,   BSPC,
+             NO, J,   L,   U,   Y,   SCLN,BSLS,
+                 H,   N,   E,   I,   O,   QUOT,
+             NO, K,   M,   COMM,DOT, SLSH,RSFT,
+                      FN25,  LEFT,DOWN,UP,  RIGHT,
+        NO,  NO,
+        NO,
+        NO,  ENT,SPC
+    ),
+    /*
 
 /*
     // templates to copy from
@@ -222,18 +288,25 @@ static const uint16_t PROGMEM fn_actions[] = {
     [17] =  ACTION_MODS_KEY(MOD_LSFT, KC_DOT),              // FN17 = Shifted . // >
     [18] =  ACTION_MODS_KEY(MOD_LSFT, KC_SLSH),             // FN18 = Shifted / // ?
     [19] =  ACTION_MODS_KEY(MOD_LSFT, KC_SCLN),             // FN19 = Shifted ; // :
+    [20] =  ACTION_MODS_KEY(MOD_LSFT, KC_EQL),              // FN20 = Shifted = // +
+
+    [21] =  ACTION_MODS_KEY(MOD_LALT, KC_P),                // FN21 = Ä
+    [22] =  ACTION_MODS_KEY(MOD_LALT, KC_LBRC),             // FN22 = Å
+    [23] =  ACTION_MODS_KEY(MOD_LALT, KC_QUOT),             // FN23 = Ö
 
     //[20] =	ACTION_LAYER_TAP_TOGGLE(1),						// FN20 - Tap toggle Layer 1
     //[21] =	ACTION_LAYER_TAP_TOGGLE(2),						// FN21 - Tap toggle Layer 2
     //[22] =	ACTION_LAYER_TAP_TOGGLE(3),						// FN22 - Tap toggle Layer 3
 
-    [20] =  ACTION_DEFAULT_LAYER_SET(0),                    // FN20 = Set default layer to Layer0
-    [21] =  ACTION_DEFAULT_LAYER_SET(1),                    // FN21 = Set default layer to Layer1
-    [22] =  ACTION_LAYER_MOMENTARY(2),                      // FN22 = momentary Layer2
+    [25] =  ACTION_LAYER_MOMENTARY(2),                      // FN25 = momentary Layer2
+    [26] =  ACTION_LAYER_MOMENTARY(3),                      // FN26 = momentary Layer3
+    [27] =  ACTION_DEFAULT_LAYER_SET(0),                    // FN27 = Set default layer to Layer0
+    [28] =  ACTION_DEFAULT_LAYER_SET(1),                    // FN28 = Set default layer to Layer1
 
-    [23] =  ACTION_FUNCTION(TEENSY_KEY),                    // FN23 - Teensy key
 
-    [24] =  ACTION_MODS_ONESHOT(MOD_LSFT),                  // FN24 = Oneshot shift
+    //[24] =  ACTION_MODS_ONESHOT(MOD_LSFT),                  // FN24 = Oneshot shift
+
+    [30] =  ACTION_FUNCTION(TEENSY_KEY),                    // FN23 - Teensy key
 
 
 /*
