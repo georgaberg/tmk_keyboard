@@ -7,7 +7,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
      * |  TAB   |   Q  |   W  |   F  |   P  |   G  | CAPS |           | PgUp |   J  |   L  |   U  |   Y  |   ;  |   \    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |  BSPC  |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
+     * |  ESC   |   A  |   R  |   S  |   T  |   D  |------|           |------|   H  |   N  |   E  |   I  |   O  |   '    |
      * |--------+------+------+------+------+------|  NO  |           | PgDn |------+------+------+------+------+--------|
      * | LSHIFT |   Z  |   X  |   C  |   V  |   B  |      |           |      |   K  |   M  |   ,  |   .  |   /  | RSHIFT |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -93,7 +93,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         ESC, 1,   2,   3,   4,   5,   NO,
         TAB, Q,   W,   E,   R,   T,   CAPS,
-        BSPC,A,   S,   D,   F,   G,
+        ESC, A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   NO,
         LCTL,LCTL,LCTL,LALT,LGUI,
                                       NO,FN30,
@@ -175,7 +175,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS
     ),
 
-    
+
 
     /*
     KEYMAP(  // Layer4: To be used with us qwerty host layout.
